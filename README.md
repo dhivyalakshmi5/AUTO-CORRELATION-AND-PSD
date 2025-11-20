@@ -44,16 +44,15 @@ This relationship bridges the **time-domain correlation** and **frequency-domain
 
 ## **Program (Scilab Code)**
 
-```scilab
-clc
-clear all; 
-t=0:0.01:2*%pi;
-x=sin(4*t) + cos(5*t); 
-subplot(3,2,1); 
+```
+clear all;
+t=0:0.01:2*3.14;
+x=sin(6*t); 
+subplot(3,2,1);
 plot(x); 
 au=xcorr(x,x);
-subplot (3,2,2); 
-plot (au); 
+subplot (3,2,2);
+plot(au); 
 v=fft(au); 
 subplot(3,2,3);
 plot(abs(v)); 
@@ -64,13 +63,10 @@ fw2=(abs(fw)).^2;
 subplot(3,2,5); 
 plot(fw2);
 ```
----
 ## **Output:**
-<img width="610" height="460" alt="image" src="https://github.com/user-attachments/assets/cf6af47a-c435-4cc4-bd98-976fd0736745" />
 
----
+![WhatsApp Image 2025-11-20 at 18 36 04_cc2eb0e7](https://github.com/user-attachments/assets/e42317fc-4790-4782-a110-10648fa298dd)
 
 ## **Result:**
 Thus the Autocorrelation and PSD are executed in Scilab and output is verified.
 
----
